@@ -1,0 +1,152 @@
+:root {
+  --orange: #ea5b0c;
+  --blanc: #fff;
+  --noir: #020202;
+  --grid: #4e4a4b;
+}
+
+.connect {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+#section-connect {
+  position: relative;
+  max-width: 400px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+.h-1 {
+  font-size: 2rem;
+  color: var(--noir);
+  text-align: center;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  max-width: 310px;
+  border-bottom: 2px solid var(--noir);
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: var(--noir);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 35px 0 5px;
+  color: var(--noir);
+}
+
+.inputbox .ion-icon {
+  position: absolute;
+  right: 8px;
+  color: var(--noir);
+  font-size: 1.2rem;
+  top: 20px;
+}
+
+.forget {
+  margin: 35px 0;
+  font-size: 0.85rem;
+  color: var(--noir);
+  display: flex;
+  justify-content: space-between;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label input {
+  margin-right: 3px;
+}
+
+.forget a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forget a:hover {
+  text-decoration: underline;
+}
+
+.btn-connect {
+  width: 100%;
+  height: 40px;
+  color: var(--blanc);
+  border-radius: 40px;
+  background-color: var(--blanc);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.btn-connect:hover {
+  background-color: var(--noir);
+}
+
+.register {
+  font-size: 0.9rem;
+  color: var(--noir);
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  text-decoration: none;
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #container-body-connect {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .logo2 {
+    display: none;
+  }
+  .connect {
+    width: 100%;
+    padding: 0;
+  }
+}

@@ -1,0 +1,109 @@
+:root{
+    --orange: #EA5B0C;
+    --blanc: #fff;
+    --noir: #020202;
+    --grid:#4E4A4B;
+}
+
+
+
+
+
+h2 {
+    font-size: 2rem;
+    color: var(--noir);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    position: relative;
+    margin: 30px 0;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 15px;
+    color: var(--noir);
+    border-bottom: 2px solid var(--noir);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+    padding-top: 10px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--noir);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea ~ label {
+    top: 20px;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group select:focus ~ label,
+.form-group select:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -5px;
+    font-size: 0.8rem;
+    color: var(--bleu-pure);
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: var(--blanc);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--orange);
+    transition: all 0.4s ease;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--noir);
+}
+
+#map {
+    height: 200px;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+@media (max-width: 768px) {
+    #container-body-demande {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    .grid2{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

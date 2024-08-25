@@ -1,0 +1,168 @@
+:root {
+  --orange: #ea5b0c;
+  --blanc: #fff;
+  --noir: #020202;
+  --grid: #4e4a4b;
+}
+
+
+
+a {
+  color: var(--noir);
+}
+
+#container-body-incription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  
+}
+
+.container {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 100%;
+
+}
+
+h2 {
+  color: var(--noir);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.from-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.from-group input,
+.from-group select {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: transparent;
+}
+
+.from-group label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  font-size: 16px;
+  color:var(--noir);
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.from-group input:focus ~ label,
+.from-group input:not(:placeholder-shown) ~ label,
+.from-group select:focus ~ label,
+.from-group select:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: var(--orange);
+}
+
+.from-group input:focus,
+.from-group select:focus {
+  border-bottom: 2px solid var(--orange);
+}
+
+button {
+  background-color: var(--blanc);
+  color: var(--orange);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--noir);
+  color: var(--blanc);
+}
+
+.trans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.get {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.img-profil{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.imgprofil{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#map {
+  height: 200px;
+  margin-top: 1rem;
+  background-color: #eee;
+}
+.photoProfil button {
+  background-color: var(--blanc);
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.photoProfil button:hover {
+  background-color: var(--orange);
+  color: var(--blanc);
+}
+
+.photoProfil button i {
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .trans {
+    grid-template-columns: 1fr;
+  }
+  
+  .get {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
